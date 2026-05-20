@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+
+  <div class="top-bar">
+    <div class="logo">🥮 PASKY SHOP</div>
+
+    <div class="search">
+      <input  id="paskaSearch" type="text" placeholder="Пошук паски..." />
+      <button id="search">🔍</button>
+    </div>
+
+    <div class="cart">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </div>
+
+
+  <div class="nav-bar">
+    <button  class="btn active" id="1">🏠 Головна</button>
+    <button id="2">ℹ️ Про нас</button>
+  
+
+    <button id="4">📞 Контакти</button>
+
+    <button id="6">📸 Соцмережі</button>
+  </div>
+
+</header>
+
+  <!-- MAIN -->
+  <main class="container">
+ 
+   <div class="paskyall" id="downContainer">
+    <h1>Каталог пасок</h1>
+      
+    <div class="products" id="products">
+
+      
+   
+
+    </div>
+    </div>
+<section class="about" id="downContainer">
+
+  <!-- HERO -->
+  <div class="about-hero">
+    <h1>Ми створюємо паски, які пахнуть святом</h1>
+    <p>
+      Традиції, що передаються поколіннями, та сучасний підхід до якості.
+    </p>
+  </div>
+
+  <!-- ІСТОРІЯ -->
+  <div class="about-block">
+    <div class="about-text">
+      <h2>Наша історія</h2>
+      <p>
+        Все почалося з маленької кухні, де наші бабусі випікали паски 
+        за сімейними рецептами. Ми виросли з цими ароматами — теплими, 
+        домашніми, справжніми.
+      </p>
+      <p>
+        Сьогодні ми зберегли ці традиції, але додали сучасний контроль якості, 
+        щоб кожна паска була ідеальною.
+      </p>
+    </div>
+    <div class="about-image"></div>
+  </div>
+
+  <!-- ПРОЦЕС -->
+  <div class="about-process">
+    <h2>Як ми виготовляємо паски</h2>
+
+    <div class="process-steps">
+
+      <div class="step">
+        <span>01</span>
+        <h3>Відбір інгредієнтів</h3>
+        <p>
+          Ми використовуємо тільки натуральні продукти: фермерські яйця, 
+          вершкове масло та якісне борошно.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>02</span>
+        <h3>Живе тісто</h3>
+        <p>
+          Наше тісто піднімається природно — без прискорювачів, 
+          щоб смак був насиченим і справжнім.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>03</span>
+        <h3>Ручна робота</h3>
+        <p>
+          Кожна паска формується вручну, з увагою до деталей.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>04</span>
+        <h3>Випікання</h3>
+        <p>
+          Ми випікаємо паски до ідеальної золотистої скоринки.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ЦІННОСТІ -->
+  <div class="about-values">
+    <div class="value-card">
+      <h3>💛 Традиції</h3>
+      <p>Ми зберігаємо рецепти, перевірені поколіннями.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>🌿 Якість</h3>
+      <p>Жодних компромісів у продуктах.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>🔥 Свіжість</h3>
+      <p>Випікаємо щодня.</p>
+    </div>
+
+    <div class="value-card">
+      <h3>🚚 Доставка</h3>
+      <p>Швидко та акуратно до вашого дому.</p>
+    </div>
+  </div>
+
+  <!-- ЛОКАЦІЯ -->
+  <div class="about-location">
+    <h2>Де нас знайти</h2>
+    <p>
+      Ми знаходимось у Львівській області ,Новояворівськ та доставляємо паски по всій Україні.
+
+    </p>
+    <a href="https://www.google.com/maps/place/%D0%9B%D0%B0%D0%B2%D0%B0%D0%BD%D0%B4%D0%B0/@49.9290358,23.5684317,1271m/data=!3m1!1e3!4m6!3m5!1s0x473b3d60bd95fcfd:0xcb3fdd46b38ede7e!8m2!3d49.9275817!4d23.5707169!16s%2Fg%2F1tcwdrky?entry=ttu&g_ep=EgoyMDI2MDQyNi4wIKXMDSoASAFQAw%3D%3D"><button > клацніть тут ,аби побачити місце</button></a>
+
+    <button class="about-btn">Замовити зараз</button>
+  </div>
+
+</section>
+<section class="contacts" id="downContainer">
+    <h2>Контакти</h2>
+
+    <div class="contact-wrapper">
+
+        <!-- КОНТАКТИ -->
+        <div class="card info">
+            <h3>Наші контакти</h3>
+            <p>📍 м. Новояворівськ, вул. Шeвченка, 12</p>
+            <p>📞 +380 99 123 45 67</p>
+            <p>✉️ bakery@example.com</p>
+            <p>🕒 Пн–Нд: 08:00 – 20:00</p>
+        </div>
+
+        <!-- ФОРМА -->
+        <div class="card form-card">
+            <h3>Написати нам</h3>
+            <form>
+                <input  id="ContactsInput1" type="text" placeholder="Ваше ім'я">
+                <input id="emailContacts" placeholder="Email">
+                <textarea id="messageContacts" placeholder="Ваше повідомлення"></textarea>
+                <button type="submit" id="send">Відправити</button>
+            </form>
+        </div>
+
+        <!-- КАРТА -->
+        <div class="card map">
+    <h3>Ми на карті</h3>
+    <div class="map-box">
+        <iframe 
+            src="https://maps.google.com/maps?q=Novoyavorivsk&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            style="width:100%; height:100%; border-radius:10px;">
+        </iframe>
+    </div>
+</div>
+
+    </div>
+</section>
+<section class="socials " style="display: none;">
+
+    <!-- HEADER -->
+    <div class="socials-header">
+        <h2>Ми в соцмережах</h2>
+        <p>Слідкуйте за нами, щоб не пропустити новинки, майстер-класи та святкові пропозиції</p>
+    </div>
+
+    <!-- BLOCK 1 -->
+    <div class="social-block">
+        <div class="text">
+            <h3>Живемо не тільки на кухні</h3>
+            <p>
+                Ми активно ділимось процесом створення пасок, новими смаками та атмосферою нашої пекарні.
+                У наших соцмережах ви побачите те, що зазвичай залишається "за кадром".
+            </p>
+
+            <div class="social-links">
+                <span>📸 Instagram</span>
+                <span>👍 Facebook</span>
+                <span>🎵 TikTok</span>
+            </div>
+        </div>
+
+        <div class="image">
+            <!-- СЮДИ ФОТО -->
+        </div>
+    </div>
+
+    <!-- BLOCK 2 -->
+    <div class="social-block reverse">
+        <div class="image2">
+            <!-- СЮДИ ФОТО -->
+        </div>
+
+        <div class="text">
+            <h3>Майстер-класи</h3>
+            <p>
+                Ми регулярно проводимо майстер-класи, де ви можете власноруч створити свою паску.
+                Це не просто навчання — це атмосфера, емоції та справжній святковий досвід.
+            </p>
+            <p>
+                Анонси завжди з’являються в наших соцмережах — не пропустіть наступний!
+            </p>
+        </div>
+    </div>
+
+    <!-- BLOCK 3 -->
+    <div class="social-block">
+        <div class="text">
+            <h3>Ще більше смаку онлайн</h3>
+            <p>
+                В Instagram ми показуємо естетику та новинки, у Facebook — ділимось новинами,
+                а в TikTok — веселий та живий контент з кухні.
+            </p>
+
+            <button class="social-btn">Перейти в Instagram</button>
+        </div>
+
+        <div class="image3">
+            <!-- СЮДИ ФОТО -->
+        </div>
+    </div>
+
+</section>
+    </div>
+ 
+    <div class="OpenCart">
+        <div class="x"><i class="fa-solid fa-xmark x-mark" ></i></div>
+        <div class="CartProductContainer">
+ <p>Your cart is empty , but you can fix that)</p>
+        </div>
+       
+        <div class="Cartprice"></div>
+         <input type="number" Id="cartNumber"  placeholder="введіть свій номер">
+        <button class="confirm">confirm</button>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
