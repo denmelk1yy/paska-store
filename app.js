@@ -9,7 +9,7 @@ require("dotenv").config();
 
 const app = express();
 
-mongoose.connect('mongodb+srv://root:GRds2Oui8TnNOm66@cluster0.rdt6ihg.mongodb.net/?appName=Cluster0')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.log(err));
 
